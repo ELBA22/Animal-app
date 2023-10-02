@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiAnimals", "ApiAnimals\ApiAnimals.csproj", "{1AF3C3C1-9D52-4390-85C4-8B6C97F0D4BD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Core\Core.csproj", "{F3D318B8-9401-4921-93AA-2476BF56DC02}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Infraestructure", "Infraestructure\Infraestructure.csproj", "{CAAF447E-5156-419A-8A24-6CEA48F9D3D4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1AF3C3C1-9D52-4390-85C4-8B6C97F0D4BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AF3C3C1-9D52-4390-85C4-8B6C97F0D4BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AF3C3C1-9D52-4390-85C4-8B6C97F0D4BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AF3C3C1-9D52-4390-85C4-8B6C97F0D4BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3D318B8-9401-4921-93AA-2476BF56DC02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3D318B8-9401-4921-93AA-2476BF56DC02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3D318B8-9401-4921-93AA-2476BF56DC02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3D318B8-9401-4921-93AA-2476BF56DC02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CAAF447E-5156-419A-8A24-6CEA48F9D3D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CAAF447E-5156-419A-8A24-6CEA48F9D3D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CAAF447E-5156-419A-8A24-6CEA48F9D3D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CAAF447E-5156-419A-8A24-6CEA48F9D3D4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
