@@ -8,24 +8,39 @@ namespace Core.Entities;
 
 public class ClienteDireccion : BaseEntity
 {
-    [Required]
+    
     public int IdCliente { get; set; }
 
-    [Required]
-    public string Calle { get; set; }
+    
+    public string TipoDeVia { get; set; }
 
-    [Required]
-    public int Numero { get; set; }
-
-    [Required]
-    public string Piso { get; set; }
+    
+    public int NumeroPri { get; set; }
 
 
-    [Required]
+    public string Letra { get; set; }
+
+    
+    public string Bis { get; set; }
+
+    public string LetraSec { get; set; }
+
+
+    public string Cardinal { get; set; }
+
+    public int NumeroSec { get; set; }
+
+    public string LetraTer { get; set; }
+
+    public int NumeroTer { get; set; }
+
+    public string CardinalSec { get; set; }
+
+    public string Complemento { get; set; }
+
     public string CodigoPostal { get; set; }
-
-
+    
     [Required]
-    public string Provincia { get; set; }
+    public int IdCiudad { get; set; }
 
 }

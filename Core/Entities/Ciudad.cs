@@ -1,12 +1,13 @@
 using System;
 using System.Collections.Generic;
-using System.Dynamic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace Core.Entities;
 
-public class Raza : BaseEntity
+public class Ciudad
 {
-    public string NombreRaza { get; set; }
+    public string NombreCiudad { get; set; }
+
+    public int IdDep { get; set; }
 }

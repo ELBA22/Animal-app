@@ -7,4 +7,6 @@ namespace Core.Entities;
 public class Departamento
 {
   public string NombreDep { get; set; }
+
+  public int IdPais { get; set; }
 }
