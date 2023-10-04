@@ -11,6 +11,8 @@ public class ClienteTelefono : BaseEntity
     [Required]
 
     public int IdCliente {get; set;}
+    public Cliente Clientes { get; set; }
+
 
     [Required]
 

@@ -16,10 +16,14 @@ public class Cita : BaseEntity
 
     [Required]
     public int IdCliente { get; set; }
+    public Cliente Clientes { get; set; }
 
     [Required]
     public int IdMascota { get; set; }
+    public Mascota  Mascotas { get; set; }
 
-        [Required]
+    [Required]
     public int ServicioId { get; set; }
+
+    public Servicio Servicios { get; set; }
 }
