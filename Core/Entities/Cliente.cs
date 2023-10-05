@@ -16,7 +16,7 @@ public class Cliente : BaseEntity
 
     [Required]
     public string Email { get; set; }
-    public virtual ClienteDireccion ClienteDireccion { get; set; }
+    public virtual ClienteDireccion ClientesDirecciones { get; set; }
 
     public ICollection<ClienteTelefono> ClientesTelefonos {get; set;}
 

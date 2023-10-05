@@ -57,12 +57,12 @@ namespace Infraestructure.Data.configuration
             .HasMaxLength(10);
 
             builder.HasOne(f => f.Clientes)
-            .WithOne(f => f.ClienteDireccion)
+            .WithOne(f => f.ClientesDirecciones)
             .HasForeignKey<ClienteDireccion>(b => b.IdClienteFk);
 
-            builder.HasOne(p => p.Ciudades)
-            .WithOne(p => p.ClienteDireccion)
-            .HasForeignKey<ClienteDireccion>(p => p.IdCiudadFk);
+            builder.HasOne(f => f.Ciudades)
+            .WithOne(f => f.ClientesDirecciones)
+            .HasForeignKey<ClienteDireccion>(f => f.IdCiudadFk);
             
         }
         

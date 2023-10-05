@@ -14,5 +14,4 @@ public class Ciudad : BaseEntity
     public Departamento Departamentos { get; set; }
 
     public ICollection<Cliente> Clientes {get; set;}
-    public object ClienteDireccion { get; set; }
 }

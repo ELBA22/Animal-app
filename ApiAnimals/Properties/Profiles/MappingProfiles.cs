@@ -2,7 +2,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using ApiAnimals.Dtos;
 using AutoMapper;
+using Core.Entities;
 
 namespace ApiAnimals.Properties.Profiles
 {
@@ -10,7 +12,7 @@ namespace ApiAnimals.Properties.Profiles
     {
         public MappingProfiles()
         {
-            CreateMap<Producto
+            CreateMap<Pais, PaisDto>().ReverseMap();
         }
         
     }
