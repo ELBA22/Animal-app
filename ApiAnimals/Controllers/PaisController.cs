@@ -32,7 +32,7 @@ public class PaisController : BaseControllerApi
         return _mapper.Map<List<PaisDto>>(paises); 
     }
 
-/*  [HttpPost]
+    [HttpPost]
     [ProducesResponseType(StatusCodes.Status201Created)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public async Task<ActionResult<Pais>> Post(PaisDto paisDto)
@@ -87,5 +87,5 @@ public class PaisController : BaseControllerApi
         await _unitOfWork.SaveAsync();
         return NoContent();
     }
-*/
+
 }

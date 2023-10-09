@@ -9,6 +9,10 @@ namespace Core.Interfaces
     {
         IPaisRepository Paises {get ;}
 
+        IDepartamentoRepository Departamentos {get ;}
+
+        
+
         Task<int> SaveAsync();
     }
 }
