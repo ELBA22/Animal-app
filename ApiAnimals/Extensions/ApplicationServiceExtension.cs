@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using AspNetCoreRateLimit;
 using Core.Entities;
+using Core.Interfaces;
+using Infraestructure.UnitOfWork;
 using Microsoft.Extensions.Options;
 
 
@@ -24,6 +26,11 @@ namespace ApiAnimals.Extensions
             );
 
         });
+
+        public static void AddApplicationServices(this IServiceCollection services)
+        {
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+        }
 
 
     public static void ConfigureRateLimiting(this  IServiceCollection services)

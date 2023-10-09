@@ -61,8 +61,8 @@ namespace Infraestructure.Data.configuration
             .HasForeignKey<ClienteDireccion>(b => b.IdClienteFk);
 
             builder.HasOne(f => f.Ciudades)
-            .WithOne(f => f.ClientesDirecciones)
-            .HasForeignKey<ClienteDireccion>(f => f.IdCiudadFk);
+            .WithMany(f => f.ClientesDirecciones)
+            .HasForeignKey(f => f.IdCiudadFk);
             
         }
         
