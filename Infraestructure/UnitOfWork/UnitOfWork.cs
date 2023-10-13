@@ -17,11 +17,14 @@ public class UnitOfWork : IUnitOfWork, IDisposable
     private CiudadRepository _ciudades;
     private DepartamentoRepository _departamentos;
     private ClienteRepository _clientes;
+
+    private CitaRepository _citas;
     private MascotaRepository _mascotas;
     private RazaRepository _razas;
     private ClienteTelRepository _clientestel;
     private ClienteDirRepository _clientesdir;
     private ServicioRepository _servicios;
+    public object ciudades;
 
     public IPaisRepository Paises
     {
@@ -107,7 +110,7 @@ public class UnitOfWork : IUnitOfWork, IDisposable
         }
     }
 
-    public IClienteTelRepository ClienteTel
+    public IClienteTelRepository ClientesTel
     {
         get
         {
@@ -130,12 +133,24 @@ public class UnitOfWork : IUnitOfWork, IDisposable
             return _clientesdir;
         }
     }
+    public ICitaRepository Citas
+    {
+        get
+        {
+            if(_citas == null)
+            {
+                _citas = new CitaRepository(_context);
+            }
+            return _citas;
+        }
+    }
+
+    public IClienteDirRepository ClientesDirs => throw new NotImplementedException();
 
     public UnitOfWork(AnimalsContext context)
     {
         _context = context;
     }
-
     public async Task<int> SaveAsync()
     {
         return await _context.SaveChangesAsync();
@@ -145,4 +160,18 @@ public class UnitOfWork : IUnitOfWork, IDisposable
     {
         _context.Dispose();
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

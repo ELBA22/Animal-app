@@ -1,12 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using AspNetCoreRateLimit;
-using Core.Entities;
 using Core.Interfaces;
-using Infraestructure.UnitOfWork;
-using Microsoft.Extensions.Options;
+using Infrastructure.UnitOfWork;
 
 
 namespace ApiAnimals.Extensions

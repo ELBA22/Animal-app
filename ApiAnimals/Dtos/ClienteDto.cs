@@ -5,12 +5,14 @@ using System.Threading.Tasks;
 
 namespace ApiAnimals.Dtos
 {
-    public class CiudadDto
+    public class ClienteDto
     {
         public int Id {get; set;}
 
-        public string NombreCiudad {get ; set; }
+        public string Nombre {get; set;}
 
-        public int IdDeparFk {get; set;}
+        public string Apellidos {get; set;}
+
+        public string Email {get; set;}
     }
 }

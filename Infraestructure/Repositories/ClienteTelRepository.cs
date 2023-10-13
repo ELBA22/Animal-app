@@ -20,7 +20,4 @@ namespace Infrastructure.Repositories
         }
     }
 
-    internal interface IClienteTelRepository
-    {
-    }
 }

@@ -19,8 +19,4 @@ namespace Infrastructure.Repositories
             _context = context;
         }
     }
-
-    internal interface IDepartamentoRepository
-    {
-    }
 }

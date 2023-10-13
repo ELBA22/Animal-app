@@ -76,10 +76,4 @@ public class DepartamentoController : BaseControllerApi
         await _unitOfWork.SaveAsync();
         return NoContent();
     }
-
-
-
-
-
-
 }

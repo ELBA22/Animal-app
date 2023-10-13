@@ -10,5 +10,7 @@ namespace ApiAnimals.Dtos
         public int Id { get; set; }
 
         public string NombreDepartamento {get; set;}
+
+        public int IdPais {get; set;}
     }
 }

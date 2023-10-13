@@ -60,9 +60,9 @@ namespace Infraestructure.Data.configuration
             .WithOne(f => f.ClientesDirecciones)
             .HasForeignKey<ClienteDireccion>(b => b.IdClienteFk);
 
-            builder.HasOne(f => f.Ciudades)
-            .WithMany(f => f.ClientesDirecciones)
-            .HasForeignKey(f => f.IdCiudadFk);
+            builder.HasOne(p => p.Ciudades)
+            .WithOne(p => p.ClientesDirecciones)
+            .HasForeignKey<ClienteDireccion>(p => p.IdCiudadFk);
             
         }
         

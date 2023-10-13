@@ -5,19 +5,16 @@ using System.Threading.Tasks;
 using Core.Entities;
 using Core.Interfaces;
 using Infraestructure.Data;
-using Infrastructure.Data;
+using Infrastructure.Repositories;
 
-namespace Infrastructure.Repositories
+namespace Infraestructure.Repositories
 {
-    public class ServicioRepository : GenericRepository<Servicio>, IServicioRepository
+    public class CitaRepository : GenericRepository<Cita>, ICitaRepository
     {
         private readonly AnimalsContext _context;
-
-        public ServicioRepository(AnimalsContext context) : base(context)
+        public CitaRepository(AnimalsContext context) : base(context)
         {
             _context = context;
         }
     }
-
-
 }

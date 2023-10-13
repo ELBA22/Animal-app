@@ -21,7 +21,7 @@ namespace Infrastructure.Data.Configuration
             builder.Property(p => p.FechaNacimiento)
             .HasColumnType("datetime");
 
-            builder.HasOne(p => p.Raza)
+            builder.HasOne(p => p.Razas)
             .WithMany(p => p.Mascotas)
             .HasForeignKey(p => p.IdRaza);
 

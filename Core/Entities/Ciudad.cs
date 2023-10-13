@@ -12,6 +12,5 @@ public class Ciudad : BaseEntity
     public int IdDep { get; set; }
 
     public Departamento Departamentos { get; set; }
-    public ClienteDireccion ClienteDireccion {get; set;}
-    public object ClientesDirecciones { get; set; }
+    public ClienteDireccion ClientesDirecciones {get; set;}
 }
