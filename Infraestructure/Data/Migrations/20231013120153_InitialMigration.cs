@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Infraestructure.Data.Migrations
 {
     /// <inheritdoc />
-    public partial class InitialCreate : Migration
+    public partial class InitialMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -164,7 +164,8 @@ namespace Infraestructure.Data.Migrations
                         .Annotation("MySql:ValueGenerationStrategy", MySqlValueGenerationStrategy.IdentityColumn),
                     NombreCiudad = table.Column<string>(type: "varchar(50)", maxLength: 50, nullable: false)
                         .Annotation("MySql:CharSet", "utf8mb4"),
-                    IdDep = table.Column<int>(type: "int", nullable: false)
+                    IdDep = table.Column<int>(type: "int", nullable: false),
+                    IdClienteDir = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -285,7 +286,8 @@ namespace Infraestructure.Data.Migrations
             migrationBuilder.CreateIndex(
                 name: "IX_ClienteDireccion_IdCiudadFk",
                 table: "ClienteDireccion",
-                column: "IdCiudadFk");
+                column: "IdCiudadFk",
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_ClienteDireccion_IdClienteFk",

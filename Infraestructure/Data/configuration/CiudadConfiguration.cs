@@ -20,6 +20,10 @@ namespace Infraestructure.Data.configuration
             builder.HasOne(p => p.Departamentos)
             .WithMany(p => p.Ciudades)
             .HasForeignKey(p => p.IdDep);
+
+            builder.HasOne(p => p.ClientesDirecciones)
+            .WithOne(p => p.Ciudades)
+            .HasForeignKey<Ciudad>(p => p.IdClienteDir);
         }
         
     }

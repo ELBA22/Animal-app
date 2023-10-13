@@ -57,6 +57,9 @@ namespace Infraestructure.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
+                    b.Property<int>("IdClienteDir")
+                        .HasColumnType("int");
+
                     b.Property<int>("IdDep")
                         .HasColumnType("int");
 
@@ -164,7 +167,8 @@ namespace Infraestructure.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("IdCiudadFk");
+                    b.HasIndex("IdCiudadFk")
+                        .IsUnique();
 
                     b.HasIndex("IdClienteFk")
                         .IsUnique();
@@ -337,8 +341,8 @@ namespace Infraestructure.Data.Migrations
             modelBuilder.Entity("Core.Entities.ClienteDireccion", b =>
                 {
                     b.HasOne("Core.Entities.Ciudad", "Ciudades")
-                        .WithMany("ClientesDirecciones")
-                        .HasForeignKey("IdCiudadFk")
+                        .WithOne("ClientesDirecciones")
+                        .HasForeignKey("Core.Entities.ClienteDireccion", "IdCiudadFk")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -383,7 +387,7 @@ namespace Infraestructure.Data.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Entities.Raza", "Raza")
+                    b.HasOne("Core.Entities.Raza", "Razas")
                         .WithMany("Mascotas")
                         .HasForeignKey("IdRaza")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -391,7 +395,7 @@ namespace Infraestructure.Data.Migrations
 
                     b.Navigation("Clientes");
 
-                    b.Navigation("Raza");
+                    b.Navigation("Razas");
                 });
 
             modelBuilder.Entity("Core.Entities.Ciudad", b =>
